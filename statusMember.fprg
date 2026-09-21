@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="statusMember"/>
+        <attribute name="authors" value="Aluna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-21 10:33:05 AM"/>
+        <attribute name="created" value="QWx1bmE7QUxVTkE7MjAyNi0wOS0yMTswOTo1OTo1OSBBTTsyMTU0"/>
+        <attribute name="edited" value="QWx1bmE7QUxVTkE7MjAyNi0wOS0yMTsxMDozMzowNSBBTTsyOzIyMzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="statusMember" type="String" array="False" size=""/>
+            <output expression="&quot;Cek Diskon Berdasarkan Status Member &quot;" newline="True"/>
+            <output expression="&quot;Masukkan status member (Gold, Silver, Bronze, Reguler)&quot;" newline="True"/>
+            <input variable="statusMember"/>
+            <if expression="statusMember = &quot;Gold&quot;">
+                <then>
+                    <output expression="&quot;Diskon 20%&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="statusMember = &quot;Silver&quot;">
+                        <then>
+                            <output expression="&quot;Diskon 15%&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="statusMember = &quot;Bronze&quot;">
+                                <then>
+                                    <output expression="&quot;Diskon 10%&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="statusMember = &quot;Reguler&quot;">
+                                        <then>
+                                            <output expression="&quot;Diskon 0%&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Status member tidak valid!&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
